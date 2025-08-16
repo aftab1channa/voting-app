@@ -1,0 +1,19 @@
+
+services:
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+
+  frontend-app:
+    build: ./frontend-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+
+volumes:
+  redis-data:
+
