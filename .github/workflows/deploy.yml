@@ -27,4 +27,4 @@ jobs:
       with:
         context: ./frontend-app
         push: true
-        tags: yourdockerhubusername/voting-app:latest
+        tags: aachanna/voting-app:latest
